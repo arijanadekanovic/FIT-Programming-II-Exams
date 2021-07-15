@@ -102,7 +102,7 @@ public:
         _trenutno++;
     }
     Kolekcija<int, int> operator()(int pocetak, int kraj) {
-        if (kraj > _trenutno)
+        if (pocetak<0 || kraj>max || kraj > _trenutno)
             throw exception("Opseg nije validan!");
         Kolekcija<int, int> nova;
         for (int i = pocetak; i <= kraj; i++)
